@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<html>
+<head>
+
+    <title>hel community folks </title>
+
+    <style>
+  
+     #rcorners{
+            position: relative;
+      border-radius: 15px 50px;
+      background: #73AD21;
+      padding: 20px;
+      width: 400px; 
+      height: 220px;
+    } 
+    
+    table {
+  border-collapse: collapse;
+  width: 50%;
+}
+
+th, td {
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #9377d6;}
+
+    .button {
+      padding: 10px 20px;
+      font-size: 19px;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+      color: #fff;
+      background-color: #064c68;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 8px rgba(51, 48, 61, 0.5);
+    }
+    
+    .button:hover {background-color: #450c66}
+    
+    .button:active {
+      background-color: #0023e9;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
+    
+    
+    label{
+      color: rgb(26, 28, 121);
+    }
+    
+    body {
+      background-image: url('fff.jpg');
+    }
+    
+
+
+    .buon {
+  background-color: #b31212; 
+  border: none;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px 20px;
+  cursor: pointer;
+}
+   .button5 {border-radius: 12px;}
+         </style>
+
+    <script >
+
+function addRow() {
+          
+          var myName = document.getElementById("name");
+          var roll = document.getElementById("roll");
+          var mail = document.getElementById("mail");
+          var table = document.getElementById("myTableData");
+       
+          var rowCount = table.rows.length;
+          var row = table.insertRow(rowCount);
+       
+          
+          row.insertCell(0).innerHTML= myName.value;
+          row.insertCell(1).innerHTML= roll.value;
+          row.insertCell(2).innerHTML= mail.value;
+          row.insertCell(3).innerHTML= '<button class="buon button5 value = "Delete"; onClick="Javacsript:deleteRow(this);">DEL</button>';
+      }
+       
+      function deleteRow(obj) {
+            
+          var index = obj.parentNode.parentNode.rowIndex;
+          var table = document.getElementById("myTableData");
+          table.deleteRow(index);
+          
+      }
+       
+     
+      function load() {
+          
+          console.log("Page load finished");
+       
+      }
+
+
+    </script>
+
+
+
+</head>
+<body onload="load()" bgcolor=  skyblue>
+
+        <img src="smiley.gif" alt="Girl in a jacket" style="width:42px;height:42px;float:right">
+                      <TR bgcolor=Thistle style="font-family:verdana; ">
+                        <h1 align=center style="font-family:Painting With Chocolate;color:rgba(255, 255, 255, 0.808);font-size:50px; text-shadow: 2px 2px 5px red;">Student Details</h1>
+      
+                        <br><p align= center id="rcorners" style="font-size:160%;">
+                            <label  for="name"><b>User Name: </b>    </label> 
+                            <Input type = text id="name" size = 20 maxlength = 15 placeholder="eg:- Arya"> <br><br>
+                    
+                            <label for="roll"><b>Register No. :</b></label>
+                            <Input type = text id="roll" size = 20 maxlength = 15 placeholder="20CSR001" > <br><br>
+                    
+                            <label for="mail"><b>Email:</b></label>
+                            <input type=email id=mail size=20 maxlength=25 placeholder="abcdefgh@gmail.com"> <br><br>
+                    
+                             
+                             <input type="button" id="add" value="Add" class="button" onclick="Javascript:addRow()">
+                                </p>
+  
+</div>
+<div id="mydata">
+
+<table id="myTableData"  width=50% cellspacing=15 cellpadding=10 align=center bgcolor=PaleGoldenRod>
+    <tr  bgcolor=Thistle style="font-family:verdana; ">
+       
+        <td style="border:2px solid rgb(12, 12, 11);" ><b>  <i class='fas fa-user' style='font-size:36px;color:red'></i></b></td>
+        <td style="border:2px solid rgb(5, 5, 5);"> <b> <i class="fa fa-drivers-license" style="font-size:30px"></i> </b></td>
+        <td style="border:2px solid rgb(17, 16, 17);"> <b>  <i class="material-icons" style="font-size:36px"> &#xe0be; </i> </b> </td>
+        <td style="border:2px solid rgb(17, 16, 17);"> <b> <i class="fa fa-trash" style="font-size:30px"></i></b></td>
+    </tr>
+</table>
+
+ 
+</div>
+
+</body>
+</html>
